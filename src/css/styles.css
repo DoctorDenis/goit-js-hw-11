@@ -1,0 +1,139 @@
+body {
+  font-family: 'Kalam', cursive;
+  font-size: 1.5rem;
+  font-weight: 700;
+  background-color: rgb(202, 215, 226);
+}
+
+a {
+  text-decoration: none;
+}
+
+.visually-hidden {
+  clip: rect(0 0 0 0);
+  clip-path: inset(50%);
+  height: 1px;
+  overflow: hidden;
+  position: absolute;
+  white-space: nowrap;
+  width: 1px;
+}
+
+.search-form {
+  display: block;
+  margin-top: 70px;
+  margin-left: auto;
+  margin-right: auto;
+  width: fit-content;
+  transform: translateX(20px);
+}
+
+[name='searchQuery'] {
+  font-family: inherit;
+  font-size: inherit;
+  border: none;
+  outline: none;
+  border-radius: 5px;
+  box-shadow: 0px 1px 5px black;
+  padding: 5px 20px;
+  margin-bottom: 20px;
+}
+
+[name='searchQuery']:focus {
+  box-shadow: inset 0px 1px 3px rgba(0, 0, 0, 0.623);
+  outline: none;
+  border: none;
+}
+
+[type='submit'] {
+  border: none;
+  background-color: transparent;
+  height: 40px;
+  width: 40px;
+  position: relative;
+  left: -55px;
+  top: 12px;
+  font-size: large;  
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  transition: all 300ms;
+  color: darkgrey;
+}
+
+[type='submit']:hover {
+color: rgb(26, 69, 148);
+background-color: rgb(211, 255, 240);
+}
+
+.icon-search {
+  fill: currentColor;
+  height: 100%;
+}
+ 
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  margin-left: auto;
+  margin-right: auto;
+  width:fit-content;
+}
+
+.photo-card {
+  margin: 20px;
+font-size: 1rem;
+background-color: #fff;
+box-shadow: 0px 1px 2px black, 0px 2px 5px darkgray;
+}
+
+.photo-card__image {
+  width: 480px;
+  height: 300px;
+  display: block;
+}
+
+.info {
+  height: 60px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  padding: 10px;
+}
+
+.info-item {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+}
+
+.load-more {
+  display: block;
+  padding: 0.5rem 1rem;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 1.5rem;
+  font-family: inherit;
+  font-weight: bold;
+  color: #fff;
+  border-radius: 10px;
+  border: 1px solid rgb(48, 129, 176);
+  text-shadow: 0px 0px 2px black;
+  background-image: linear-gradient(rgb(152, 200, 255), rgb(48, 129, 176));
+}
+
+.final-message {
+  text-align: center;
+  color: #fff;
+  text-shadow: 0px 0px 1px black, 0px 0px 3px black;
+  font-size: 3rem;
+}
