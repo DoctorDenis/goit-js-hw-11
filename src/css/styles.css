@@ -3,6 +3,7 @@ body {
   font-size: 1.5rem;
   font-weight: 700;
   background-color: rgb(202, 215, 226);
+  margin: 0;
 }
 
 a {
@@ -84,14 +85,14 @@ background-color: rgb(211, 255, 240);
 }
 
 .photo-card {
-  margin: 20px;
+  margin: 15px;
 font-size: 1rem;
 background-color: #fff;
 box-shadow: 0px 1px 2px black, 0px 2px 5px darkgray;
 }
 
 .photo-card__image {
-  width: 480px;
+  width: 440px;
   height: 300px;
   display: block;
 }
