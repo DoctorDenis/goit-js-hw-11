@@ -117,15 +117,15 @@ async function fetchImages(pageNumber) {
 
       renderGalleryMarkup(response.data.hits);
 
-      gallery = new simpleLightbox('.gallery a', {
-        captionsData: 'alt',
-        captionDelay: 250,
-        animationSpeed: 180,
-        animationSlide: true,
-      });
-      gallery.on('closed.simplelightbox', function (e) {
-        gallery.refresh();
-      });
+      // gallery = new simpleLightbox('.gallery a', {
+      //   captionsData: 'alt',
+      //   captionDelay: 250,
+      //   animationSpeed: 180,
+      //   animationSlide: true,
+      // });
+      // gallery.on('closed.simplelightbox', function (e) {
+      //   gallery.refresh();
+      // });
 
       if (
         document.querySelectorAll('.photo-card').length === totalHits &&
@@ -134,7 +134,7 @@ async function fetchImages(pageNumber) {
         refs.loadMoreBtnEl.classList.add('visually-hidden');
         const endMessage = document.createElement('h2');
         endMessage.classList.add('final-message');
-        endMessage.textContent = "That's all, folks!";
+        endMessage.textContent = "We're sorry, but you've reached the end of search results.";
         document.querySelector('.gallery').after(endMessage);
       }
     })
@@ -144,6 +144,15 @@ async function fetchImages(pageNumber) {
     })
     .then(function () {
       // always executed
+        gallery = new simpleLightbox('.gallery a', {
+        captionsData: 'alt',
+        captionDelay: 250,
+        animationSpeed: 180,
+        animationSlide: true,
+      });
+      gallery.on('closed.simplelightbox', function (e) {
+        gallery.refresh();
+      });
     });
 }
 
